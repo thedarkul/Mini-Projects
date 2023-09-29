@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: #1f2632;
+  color: #fff;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  font-size: 3rem;
+}
+
+.container {
+  background-color: #323a49;
+  max-width: 80rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+}
+p {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 5rem;
+  text-align: center;
+}
+
+li {
+  border: 2px solid #fff;
+  padding: 1rem 0;
+  background-color: #353c47;
+  border-radius: 0.5rem;
+}
+
+a,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+}
+
+a:hover {
+  color: #748ffc;
+}
+
+a:active {
+  color: #7048e8;
+}
+
+footer {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 5rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+footer p a:hover {
+  color: #007bff;
+}
+footer p a:active {
+  color: #9775fa;
+}
+
+@media (max-width: 840px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  ul {
+    font-size: 1.4rem;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 3rem;
+  }
+  li {
+    padding: 1rem 2.5rem;
+  }
+}
