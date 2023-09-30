@@ -3,10 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Image Slider</title>
     <link rel="stylesheet" href="imageslider.css" />
   </head>
   <body>
     <h1>Image Slider</h1>
+    <div class="slider">
+      <div class="slider-wrapper">
+        <input
+          type="radio"
+          class="slider__open"
+          id="slider-1"
+          name="slider"
+          aria-hidden="true"
+          checked
+          hidden
+        />
+        <div class="slider__item">
+          <img src="./img-slider--image/chinatown.png" alt="" />
+        </div>
+        <input
+          type="radio"
+          class="slider__open"
+          id="slider-2"
+          name="slider"
+          aria-hidden="true"
+          hidden
+        />
+        <div class="slider__item">
+          <img src="./img-slider--image/chinatown-2.png" alt="" />
+        </div>
+        <input
+          type="radio"
+          class="slider__open"
+          id="slider-3"
+          name="slider"
+          aria-hidden="true"
+          hidden
+        />
+        <div class="slider__item">
+          <img src="./img-slider--image/chinatown3.png" alt="" />
+        </div>
+        <input
+          type="radio"
+          class="slider__open"
+          id="slider-4"
+          name="slider"
+          aria-hidden="true"
+          hidden
+        />
+        <div class="slider__item">
+          <img src="./img-slider--image/chinatown-4.jpg" alt="" />
+        </div>
+        <!-- First Slide -->
+        <label for="slider-4" class="slider__control prev control-1">‹</label>
+        <label for="slider-2" class="slider__control next control-1">›</label>
+
+        <!-- Second Slide -->
+        <label for="slider-1" class="slider__control prev control-2">‹</label>
+        <label for="slider-3" class="slider__control next control-2">›</label>
+
+        <!-- Third Slide -->
+        <label for="slider-2" class="slider__control prev control-3">‹</label>
+        <label for="slider-4" class="slider__control next control-3">›</label>
+
+        <!-- Fourth Slide -->
+        <label for="slider-3" class="slider__control prev control-4">‹</label>
+        <label for="slider-1" class="slider__control next control-4">›</label>
+        <ul class="slider__indicators">
+          <li>
+            <label for="slider-1" class="slider__bullet"> • </label>
+          </li>
+          <li>
+            <label for="slider-2" class="slider__bullet"> • </label>
+          </li>
+          <li>
+            <label for="slider-3" class="slider__bullet"> • </label>
+          </li>
+          <li>
+            <label for="slider-4" class="slider__bullet"> • </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Developed with 🖤 by
+        <a href="https://github.com/Darkull" target="_blank">Darkul</a>
+      </p>
+    </footer>
   </body>
 </html>
