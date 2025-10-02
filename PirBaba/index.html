@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পিরে আজম ডিটক্স উদ্দিন শাহ চৌধুরীর দরবার</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(19, 9, 38, 1) 0%, rgba(26, 4, 34, 1) 35%, rgba(13, 51, 35, 1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .carousel-item {
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+        .nav-link {
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-link:hover {
+            color: #FBBF24; /* amber-400 */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header and Navigation -->
+    <header class="bg-black bg-opacity-50 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-amber-400">দরবার শরিফ</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#biography" class="nav-link">পিরের পরিচয়</a>
+                <a href="#quotes" class="nav-link">গভীর উক্তি</a>
+                <a href="#community" class="nav-link">মুরিদদের দরবার</a>
+                <a href="#tools" class="nav-link">তাবিজ ও হেকমত</a>
+                <a href="#library" class="nav-link">লাইব্রেরি</a>
+                <a href="#contact" class="nav-link">যোগাযোগ</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-70">
+            <a href="#biography" class="block py-2 px-4 text-sm hover:bg-green-800">পিরের পরিচয়</a>
+            <a href="#quotes" class="block py-2 px-4 text-sm hover:bg-green-800">গভীর উক্তি</a>
+            <a href="#community" class="block py-2 px-4 text-sm hover:bg-green-800">মুরিদদের দরবার</a>
+            <a href="#tools" class="block py-2 px-4 text-sm hover:bg-green-800">তাবিজ ও হেকমত</a>
+            <a href="#library" class="block py-2 px-4 text-sm hover:bg-green-800">লাইব্রেরি</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-green-800">যোগাযোগ</a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative px-4">
+        <div id="star-container"></div>
+        <div class="z-10">
+            <div class="flex justify-center mb-8">
+                <!-- Dome Icon -->
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="url(#gold-gradient)" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M12 2C6.48 2 2 6.48 2 12h20c0-5.52-4.48-10-10-10zm0 18c-3.31 0-6-2.69-6-6h12c0 3.31-2.69 6-6 6zm0-8H4c0 4.42 3.58 8 8 8s8-3.58 8-8h-8zM12 4c4.42 0 8 3.58 8 8H4c0-4.42 3.58-8 8-8z" transform="scale(1, 0.8) translate(0, 2)"/>
+                    <path d="M2 22h20v-2H2v2z"/>
+                    <path d="M11 12v8h2v-8h-2z"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4" style="text-shadow: 0 0 15px rgba(251, 191, 36, 0.7);">পিরে আজম ডিটক্স উদ্দিন শাহ চৌধুরীর দরবারে আপনাকে স্বাগতম</h1>
+            <p class="text-xl md:text-2xl text-amber-300 mb-8">যেখানে আধ্যাত্মিকতা মিশে যায় মজার রসিকতায়</p>
+            <a href="#biography" class="bg-amber-500 text-green-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-amber-400 transition duration-300 transform hover:scale-105 shadow-lg shadow-amber-500/30">দরবারে প্রবেশ করুন</a>
+        </div>
+    </section>
+
+    <!-- 2. Pir's Biography -->
+    <section id="biography" class="py-20 bg-green-900 bg-opacity-30">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-amber-400 mb-12">তিনি কে?</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-lg">
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20 shadow-lg">
+                    <h3 class="text-2xl font-semibold text-amber-300 mb-3">জন্ম</h3>
+                    <p>"কোনো নির্দিষ্ট তারিখে নয়, সময়ের বাইরে।"</p>
+                </div>
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20 shadow-lg">
+                    <h3 class="text-2xl font-semibold text-amber-300 mb-3">বিশেষত্ব</h3>
+                    <p>"মানুষের আত্মার কম্পন বুঝতে পারেন এবং মাঝে মাঝে নেটওয়ার্কের সিগন্যালও।"</p>
+                </div>
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20 shadow-lg">
+                    <h3 class="text-2xl font-semibold text-amber-300 mb-3">শিষ্যরা বলেন</h3>
+                    <p>"তিনি আধ্যাত্মিক গুগল, তবে প্রায়শই উত্তর না দিয়ে শুধু হাসেন।"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Quotes Carousel -->
+    <section id="quotes" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-amber-400 mb-4">ফালতু কিন্তু গভীর উক্তি</h2>
+            <div id="quote-carousel" class="relative max-w-3xl mx-auto h-48 flex items-center justify-center bg-gray-800 border-2 border-amber-500/30 rounded-2xl p-8 shadow-2xl">
+                <div class="carousel-item active">
+                    <p class="text-2xl md:text-3xl italic text-white">“চা না খেলে দুনিয়া অন্ধকার, আর কাপে চিনি বেশি হলে মেজাজ গরম।”</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="text-2xl md:text-3xl italic text-white">“ফেসবুক স্ক্রল করা মানে সময়কে কবরে দাফন করা, তাও আবার কিস্তিতে।”</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="text-2xl md:text-3xl italic text-white">“আত্মা শুদ্ধ হয়, যখন তুমি ভাতের সাথে ডাল এমনভাবে মেশাও, যেন তারা জনম জনমের সঙ্গী।”</p>
+                </div>
+                 <div class="carousel-item">
+                    <p class="text-2xl md:text-3xl italic text-white">“হতাশ হয়ো না, কারণ রিমোটের ব্যাটারিও একদিন শেষ হয়।”</p>
+                </div>
+                <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-amber-500/50 hover:bg-amber-500 p-2 rounded-full ml-[-20px] text-white">
+                    &#10094;
+                </button>
+                <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-amber-500/50 hover:bg-amber-500 p-2 rounded-full mr-[-20px] text-white">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Community Space -->
+    <section id="community" class="py-20 bg-green-900 bg-opacity-30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-400 mb-12">মুরিদদের দরবার</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20">
+                    <p class="mb-2">"আমি হুজুরকে জিজ্ঞেস করলাম, 'মনের শান্তি কীভাবে পাবো?' তিনি বললেন, ‘বাবা, শান্তি রিমোট কন্ট্রোলের মতো। অন্যের হাতে থাকলে কখনো পাবে না, নিজের হাতে রাখো। আর হ্যাঁ, সোফার ফাঁকগুলোতেও খুঁজে দেখো, মাঝে মাঝে ওখানেই পাওয়া যায়’।’।"</p>
+                    <p class="text-right text-amber-300 font-semibold">- ভক্ত ডারকুল</p>
+                </div>
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20">
+                    <p class="mb-2">"এত কাজ দেখে মনে হচ্ছে পুরো হিমালয় আমার ঘাড়ে চেপে বসেছে, আমি নড়তেও পারছি না। উফফ! এত কাজ! আমি কিচ্ছু করতে পারবো না।"</p>
+                    <p class="text-right text-amber-300 font-semibold">- শিষ্যা মায়া</p>
+                </div>
+                 <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20">
+                    <p class="mb-2">"হুজুর বলেছেন, মনে শান্তি আনতে হলে ফোনের নোটিফিকেশন বন্ধ করে দাও। করেছি। এখন ফোন হারালে যেমন লাগে, তেমন লাগছে।"</p>
+                    <p class="text-right text-amber-300 font-semibold">- শিষ্যা রুূপকথা</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Fun Tools/Widgets -->
+    <section id="tools" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-amber-400 mb-12">তাবিজ ও হেকমত</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- Random Quote Generator -->
+                <div class="w-full md:w-1/2">
+                    <button id="quote-generator-btn" class="w-full bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-green-600 transition duration-300 transform hover:scale-105">আজকের আধ্যাত্মিক নির্দেশনা নিন</button>
+                    <div id="generated-quote" class="mt-4 p-4 min-h-[80px] flex items-center justify-center bg-gray-800 rounded-lg text-amber-300 text-xl italic"></div>
+                </div>
+                <!-- Wazifa Button -->
+                <div class="w-full md:w-1/2">
+                    <button id="wazifa-btn" class="w-full bg-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-purple-600 transition duration-300 transform hover:scale-105">পিরে আজমের ওয়াজিফা</button>
+                    <div id="wazifa-text" class="mt-4 p-4 min-h-[80px] flex items-center justify-center bg-gray-800 rounded-lg text-amber-300 text-xl italic"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Library/Blog -->
+    <section id="library" class="py-20 bg-green-900 bg-opacity-30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-400 mb-12">দরবারের লাইব্রেরি</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-amber-300 mb-3">কেন আমরা ফেসবুকে লাইক খুঁজি? আত্মার ক্ষুধা নাকি ডিজিটাল ভিক্ষা?</h3>
+                    <p class="flex-grow">লাইকের সংখ্যা কি আমাদের আত্মমর্যাদা নির্ধারণ করে? পিরে আজম বলেন, "যত লাইক তত একাকিত্ব।" আসুন, এই গভীর তত্ত্বটি নিয়ে আলোচনা করি...</p>
+                    <a href="#" class="mt-4 text-amber-400 hover:text-amber-200 self-start">আরও পড়ুন &rarr;</a>
+                </div>
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-amber-300 mb-3">আধ্যাত্মিক দুনিয়া আর মেমের সংযোগ: হাসতে হাসতে মোক্ষ লাভ</h3>
+                    <p class="flex-grow">একটি ভালো মেম যেভাবে আমাদের মন ভালো করে, সেভাবেই কি আধ্যাত্মিক জ্ঞান আত্মাকে শান্তি দেয়? দুটোর মধ্যে সংযোগ কোথায়? চলুন খুঁজে বের করি...</p>
+                    <a href="#" class="mt-4 text-amber-400 hover:text-amber-200 self-start">আরও পড়ুন &rarr;</a>
+                </div>
+                <div class="bg-purple-900 bg-opacity-30 p-6 rounded-xl border border-amber-500/20 flex flex-col">
+                    <h3 class="text-2xl font-semibold text-amber-300 mb-3">মোবাইল চার্জার এবং জীবনের শক্তি: একটি তুলনামূলক আলোচনা</h3>
+                    <p class="flex-grow">আমাদের শরীর এবং মনও কি প্রতিদিন চার্জের অভাবে দুর্বল হয়ে পড়ে? জীবনের সকেট কোথায়? পিরে আজমের কাছ থেকে জেনে নিন রিচার্জ করার উপায়... </p>
+                    <a href="#" class="mt-4 text-amber-400 hover:text-amber-200 self-start">আরও পড়ুন &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-amber-400 mb-12">যোগাযোগ ও দরবারের ঠিকানা</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+                <!-- Form -->
+                <div class="w-full md:w-1/2 bg-gray-800 p-8 rounded-2xl border border-amber-500/20">
+    <h3 class="text-2xl font-semibold text-amber-300 mb-6">শিষ্য হতে চাইলে নাম লেখাও</h3>
+    <form action="https://formspree.io/f/mnngvbnl" method="POST">
+        <div class="mb-4">
+            <input 
+                type="text" 
+                name="name" 
+                placeholder="আপনার নাম" 
+                required
+                class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="mb-4">
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="আপনার ইমেইল" 
+                required
+                class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-amber-500">
+        </div>
+        <div class="mb-6">
+            <textarea 
+                name="message" 
+                placeholder="কেন মুরিদ হতে চান?" 
+                rows="4" 
+                required
+                class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-amber-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-amber-500 text-green-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-amber-400 transition duration-300">
+            আবেদন করুন
+        </button>
+    </form>
+</div>
+
+                <!-- Location -->
+                <div class="w-full md:w-1/2 text-left p-8">
+                     <h3 class="text-2xl font-semibold text-amber-300 mb-4">আমাকে কোথায় পাবেন?</h3>
+                     <p class="text-lg leading-relaxed">"আমাকে খুঁজে পাবে কোনো এক চায়ের দোকানে, যেখানে আড্ডা আর আলসেমি একসাথে ধোঁয়া তোলে। ছিটা রুটি ভাজার গন্ধ নাকে এলেই বুঝবে আমি আশেপাশেই। নির্দিষ্ট ঠিকানা খুঁজো না, আত্মার টানে আসো। মাঝে মাঝে হয়তো Free4Talk-এও আমাকে পেয়ে যাবে।"</p>
+                     <div class="mt-6 flex items-center space-x-4 text-amber-400">
+                        <!-- Tea Cup Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M18.37 12.63A7 7 0 0 0 13 12.18V21a8 8 0 0 0 7-7.47"></path><path d="M6 18H3v3h3z"></path></svg>
+                        <span class="text-xl">চায়ের দোকান ও গরম সিঙ্গারা</span>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-black bg-opacity-50">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; ২০২৫ | পিরে আজম ডিটক্স উদ্দিন শাহ চৌধুরী। সর্বস্বত্ব সংরক্ষিত (কিন্তু শেয়ার করলে সমস্যা নাই)।</p>
+        </div>
+    </footer>
+
+    <script>
+        // Starry night effect
+        const starContainer = document.getElementById('star-container');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 3 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starContainer.appendChild(star);
+        }
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Quotes Carousel
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentItem = 0;
+
+        function showItem(index) {
+            carouselItems.forEach((item, i) => {
+                item.classList.remove('active');
+                if (i === index) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        
+        function nextItem() {
+            currentItem = (currentItem + 1) % carouselItems.length;
+            showItem(currentItem);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentItem = (currentItem - 1 + carouselItems.length) % carouselItems.length;
+            showItem(currentItem);
+        });
+        nextBtn.addEventListener('click', nextItem);
+        
+        setInterval(nextItem, 5000); // Auto-slide every 5 seconds
+
+        // Fun Tools
+        const quoteGeneratorBtn = document.getElementById('quote-generator-btn');
+        const generatedQuoteDiv = document.getElementById('generated-quote');
+        const spiritualQuotes = [
+            "দুপুরে ঝালমুড়ি খাও, আত্মার শান্তি আনো।",
+            "আজকের জন্য তোমার আধ্যাত্মিক কাজ হলো, রিকশাওয়ালাকে মামা ডাকা।",
+            "টিভির রিমোট খুঁজে বের করো, নিজের ভেতরের প্রশান্তিও খুঁজে পাবে।",
+            "গান শুনতে শুনতে বাথরুমে নাচাও একটি উচ্চমার্গীয় সাধনা।",
+            "মন খারাপ? এক কাপ গরম চা খাও, সব ঠিক হয়ে যাবে।"
+        ];
+        quoteGeneratorBtn.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * spiritualQuotes.length);
+            generatedQuoteDiv.textContent = `"${spiritualQuotes[randomIndex]}"`;
+        });
+
+        const wazifaBtn = document.getElementById('wazifa-btn');
+        const wazifaTextDiv = document.getElementById('wazifa-text');
+        wazifaBtn.addEventListener('click', () => {
+            wazifaTextDiv.textContent = '"আজ সারাদিন হাসতে হবে, এটাই ওজিফা। কারণ, হাসলে আত্মার ডিটক্স হয়।"';
+        });
+
+    </script>
+
+</body>
+</html>
