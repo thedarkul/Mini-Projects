@@ -45,7 +45,7 @@ prevBtn.addEventListener("click", () => {
 });
 nextBtn.addEventListener("click", nextItem);
 
-setInterval(nextItem, 5000); // Auto-slide every 5 seconds
+setInterval(nextItem, 9000); // Auto-slide every 9 seconds
 
 // Fun Tools
 const quoteGeneratorBtn = document.getElementById("quote-generator-btn");
